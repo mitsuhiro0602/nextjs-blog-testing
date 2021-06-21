@@ -1,10 +1,15 @@
-import '@testing-library/dom/extend-expect'
+/**
+ * @jest-environment jsdom
+ */
+
+import '@testing-library/jest-dom/extend-expect'
 import { render, screen } from '@testing-library/react'
 import useEffect from '@testing-library/user-event'
 import { StateProvider } from '../context/StateProvider'
 import ContextA from '../components/ContextA'
 import ContextB from '../components/ContextB'
 import userEvent from '@testing-library/user-event'
+import 'setimmediate'
 
 describe('Global state management (useContext)', () => {
   it('Should change the toggle state globally', () => {

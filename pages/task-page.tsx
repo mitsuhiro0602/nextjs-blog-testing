@@ -44,7 +44,7 @@ export default TaskPage
 
 export const getStaticProps: GetStaticProps = async () => {
   const staticTasks = await getAllTasksData()
-  return (
+  return {
     props: { staticTasks },
-  )
+  }
 }

@@ -21,10 +21,10 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
     initialData: staticTasks,
     revalidateOnMount: true,
   })
-  if(error) return <span>Error!</span>
+  if (error) return <span>Error!</span>
   return (
     <Layout title="Todos">
-      <p className="mb-10 text-4xl">
+      <p className="mb-10 text-4xl">todos page</p>
       <ul>
         {tasks &&
           tasks.map((task) => (
@@ -33,10 +33,8 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
               {': '}
               <span>{task.title}</span>
             </li>
-          ))
-        }
+          ))}
       </ul>
-      </p>
     </Layout>
   )
 }
